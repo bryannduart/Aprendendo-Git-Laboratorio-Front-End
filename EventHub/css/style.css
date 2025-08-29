@@ -1,13 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  font-family: Arial, sans-serif; /* define a fonte do site como Arial, com fallback sans-serif */
+  background-color: #f0f0f0;         /* define a cor de fundo da página*/
+  color: black;                     /* define a cor do texto*/
 }
 
 h1 {
-  color: #007acc;
+  color: #007acc; /* define a cor do título principal */
 }
 
 p {
-  font-size: 16px;
+  font-size: 16px; /* define o tamanho da fonte dos parágrafos como 16 pixels */
+  color: #555;          /* cor cinza média para melhor leitura */
+  line-height: 1.5;     /* espaçamento entre linhas, deixa o texto mais legível */
+  text-align: justify;   /* justifica o texto */
+}
+
+
+main img {
+  width: 400px;      /* largura */
+  height: auto;      /* mantém a proporção */
+  max-width: 100%;   /* garante que a imagem nunca ultrapasse a tela */
+  border: 3px solid #007acc; /* cria uma borda ao redor do elemento: */
+  border-radius: 15px;   /* cantos arredondados */
+  margin: 20px auto;     /* centraliza a imagem horizontalmente */
+}
+
+a {
+  color: #007acc;       /* cor para links */
+  text-decoration: none; /* remove sublinhado padrão */
+}
+
+a:hover {
+  color: #CFAE5C;       /* muda a cor ao passar o mouse no link*/
+}
+
+footer {
+  background-color: #111;   /* fundo escuro no rodapé */
+  color: #ccc;              /* texto cinza claro */
+  text-align: center;       /* centraliza o texto */
+  padding: 15px;            /* espaço interno */
+  font-size: 14px;          /* tamanho da fonte menor que o corpo */
 }
