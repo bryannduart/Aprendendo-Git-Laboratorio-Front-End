@@ -1,64 +1,116 @@
 body {
-  font-family: Arial, sans-serif; /* define a fonte do site como Arial, com fallback sans-serif */
-  background-color: #f0f0f0;         /* define a cor de fundo da página*/
-  color: black;                     /* define a cor do texto*/
+  font-family: Arial, sans-serif;  /* define a fonte do site como Arial, com fallback sans-serif */
+  background-color: #f0f0f0;       /* define a cor de fundo da página*/
+  color: black;                    /* define a cor do texto*/
+  margin: 0;                       /* remove a margem padrão aplicada pelo navegador */
+  padding: 0;                      /* remove o espaçamento interno padrão do body */
 }
 
 h1 {
-  color: #007acc; /* define a cor do título principal */
+  color: #007acc;                  /* define a cor do título principal */
+  margin: 10px;                    /* adiciona um espaçamento externo em todos os lados do título */
 }
 
 p {
-  font-size: 16px; /* define o tamanho da fonte dos parágrafos como 16 pixels */
-  color: #555;          /* cor cinza média para melhor leitura */
-  line-height: 1.5;     /* espaçamento entre linhas, deixa o texto mais legível */
-  text-align: justify;   /* justifica o texto */
+  font-size: 16px;                 /* define o tamanho da fonte dos parágrafos como 16 pixels */
+  color: #555;                     /* cor cinza média para melhor leitura */
+  line-height: 1.5;                /* espaçamento entre linhas, deixa o texto mais legível */
+  text-align: justify;             /* justifica o texto */
 }
 
-
 main img {
-  width: 400px;      /* largura */
-  height: auto;      /* mantém a proporção */
-  max-width: 100%;   /* garante que a imagem nunca ultrapasse a tela */
-  border: 3px solid #007acc; /* cria uma borda ao redor do elemento: */
-  border-radius: 15px;   /* cantos arredondados */
-  margin: 20px auto;     /* centraliza a imagem horizontalmente */
+  width: 200px;                    /* largura */
+  height: auto;                    /* mantém a proporção */
+  max-width: 100%;                 /* garante que a imagem nunca ultrapasse a tela */
+  border: 3px solid black;         /* cria uma borda ao redor do elemento: */
+  border-radius: 15px;             /* cantos arredondados */
+  display: block;                  /* transforma a imagem em um elemento de bloco (necessário para centralizar com margin auto) */
+  margin: 20px auto;               /* centraliza a imagem horizontalmente */
 }
 
 a {
-  color: #007acc;       /* cor para links */
-  text-decoration: none; /* remove sublinhado padrão */
+  color: #007acc;                  /* cor para links */
+  text-decoration: none;           /* remove sublinhado padrão */
 }
 
 a:hover {
-  color: #CFAE5C;       /* muda a cor ao passar o mouse no link*/
+  color: black;                    /* muda a cor ao passar o mouse no link*/
 }
 
 header {
-	background-color: lightgrey;    /* cor de fundo do cabeçalho */
-	border-radius: 0px 0px 10px 10px;   /* editar as bordas deixando arredondadas apenas na parte inferior */
-	display: flex;    /* usa Flexbox para organizar os elementos dentro do header */
-	align-items: center;    /* centraliza verticalmente os itens do header */
-	justify-content: space-between;	/* deixa espaço igual entre os itens, um na esquerda e outro na direita */
-    padding: 0 10px;
+	background-color: lightgrey;         /* cor de fundo do cabeçalho */
+	border-radius: 0px 0px 10px 10px;    /* editar as bordas deixando arredondadas apenas na parte inferior */
+	display: flex;                       /* usa Flexbox para organizar os elementos dentro do header */
+	align-items: center;                 /* centraliza verticalmente os itens do header */
+    justify-content: space-between; 	 /* deixa espaço igual entre os itens, um na esquerda e outro na direita */
+	padding: 15 20px;                    /* adiciona espaçamento interno: 15px em cima/baixo e 20px nas laterais */
+}
+
+header h1 {
+  margin: 10;                      /* adiciona espaçamento externo em todos os lados do título dentro do cabeçalho */
+}
+
+header nav a {
+  font-size: 18px;                 /* define o tamanho da fonte dos links */
+  color: #007acc;                  /* define a cor para os links */
+  border-radius: 5px;              /* arredonda os cantos dos links */
+  padding: 3px 6px;                /* adiciona espaço interno (3px em cima/baixo, 6px nas laterais) */
+  margin-right: 15px;              /* dá espaçamento de 15px à direita entre cada link */
+  text-decoration: none;           /* remove o sublinhado padrão dos links */
+}
+
+header nav a:hover {
+  text-decoration: none;           /* mantém sem sublinhado quando passa o mouse */
+  background-color: #007acc;       /* muda a cor do fundo no hover */
+  color: white;                    /* muda a cor do texto para branco no hover */
+}
+
+.container {
+  display: flex;                   /* aplica Flexbox para organizar os elementos em linha */
+  gap: 20px;                       /* adiciona um espaço de 20px entre os elementos */
+  margin-top: 20px;                /* adiciona espaço acima do container */
+}
+
+.item {
+  background: lightgrey;           /* define a cor do fundo para cada item */
+  margin: 10px;                    /* adiciona espaçamento externo ao redor do item */
+  padding: 15px;                   /* adiciona espaçamento interno */
+  border-radius: 6px;              /* arredonda os cantos do item */
+  flex: 1;                         /* faz cada item ocupar o mesmo espaço disponível */
+}
+
+.item h2 {
+  margin-top: 0;                   /* remove o espaço extra acima do subtítulo */
+}
+
+button {
+  background: #007acc;             /* cor de fundo */
+  color: white;                    /* cor do texto */
+  border: none;                    /* remove bordas padrão */
+  padding: 10px 15px;              /* adiciona espaço interno ao botão */
+  border-radius: 4px;              /* arredonda levemente os cantos do botão */
+  cursor: pointer;                 /* muda o cursor para "mãozinha" ao passar em cima */
+}
+
+button:hover {
+  background: #005fa3;             /* muda a cor ao passar o mouse */
 }
 
 footer {
-  background-color: lightgrey;   /* fundo escuro no rodapé */
-  border-radius: 10px 10px 0px 0px;   /* bordas arredondadas apenas na parte inferior do rodapé */
-  color: black;              /* texto cinza claro */
-  text-align: center;       /* centraliza o texto */
-  padding: 15px;            /* espaço interno */
-  font-size: 14px;          /* tamanho da fonte menor que o corpo */
+  width: 100%;                          /* ocupa a largura toda */
+  border-radius: 10px 10px 0px 0px;     /* editar as bordas deixando arredondadas apenas na parte superior */
+  margin: 0;                            /* sem margens */
+  padding: 15px;                        /* espaçamento interno */
+  background-color: lightgrey;          /* mesma cor do cabeçalho */
+  text-align: center;                   /* centraliza o texto */
+  box-sizing: border-box;               /* evita estouro da largura */
 }
 
-html, body {   /* Remove margens e padding padrão do navegador para pode preencher a header e o footer 100% */
-  margin: 0;
-  padding: 0;
-}
-
-
-header, footer {  /* Faz header e footer ocuparem 100% da largura */
-  width: 100%;
-  box-sizing: border-box; /* garante que padding e border não aumentem a largura */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;                      /* reduz padding para telas pequenas */
+  }
+  h1 {
+    font-size: 24px;                    /* diminui tamanho da fonte */
+  }
 }
