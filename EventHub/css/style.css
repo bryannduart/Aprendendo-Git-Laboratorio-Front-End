@@ -34,10 +34,31 @@ a:hover {
   color: #CFAE5C;       /* muda a cor ao passar o mouse no link*/
 }
 
+header {
+	background-color: lightgrey;    /* cor de fundo do cabeçalho */
+	border-radius: 0px 0px 10px 10px;   /* editar as bordas deixando arredondadas apenas na parte inferior */
+	display: flex;    /* usa Flexbox para organizar os elementos dentro do header */
+	align-items: center;    /* centraliza verticalmente os itens do header */
+	justify-content: space-between;	/* deixa espaço igual entre os itens, um na esquerda e outro na direita */
+    padding: 0 10px;
+}
+
 footer {
-  background-color: #111;   /* fundo escuro no rodapé */
-  color: #ccc;              /* texto cinza claro */
+  background-color: lightgrey;   /* fundo escuro no rodapé */
+  border-radius: 10px 10px 0px 0px;   /* bordas arredondadas apenas na parte inferior do rodapé */
+  color: black;              /* texto cinza claro */
   text-align: center;       /* centraliza o texto */
   padding: 15px;            /* espaço interno */
   font-size: 14px;          /* tamanho da fonte menor que o corpo */
+}
+
+html, body {   /* Remove margens e padding padrão do navegador para pode preencher a header e o footer 100% */
+  margin: 0;
+  padding: 0;
+}
+
+
+header, footer {  /* Faz header e footer ocuparem 100% da largura */
+  width: 100%;
+  box-sizing: border-box; /* garante que padding e border não aumentem a largura */
 }
